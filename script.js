@@ -2,7 +2,8 @@
 
 const output = document.querySelector("#output");
 const arr = [1, 2, 3, 4];
-let odd, even;
+let odd;
+const even = [];
 
 const func = async () => {
   const first = await new Promise((resolve) => {
@@ -15,9 +16,9 @@ const func = async () => {
   });
   const second = await new Promise((resolve) => {
     setTimeout(() => {
-      even = arr.filter((val) => {
+      arr.forEach((val) => {
         if (val % 2 === 0) {
-          return val * 2;
+          even.push(val * 2);
         }
       });
       console.log(even);
