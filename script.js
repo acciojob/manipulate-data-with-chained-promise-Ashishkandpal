@@ -3,7 +3,7 @@
 const output = document.querySelector("#output");
 const arr = [1, 2, 3, 4];
 let odd;
-const even = [];
+const mul = [];
 
 const func = async () => {
   const first = await new Promise((resolve) => {
@@ -18,11 +18,14 @@ const func = async () => {
     setTimeout(() => {
       arr.forEach((val) => {
         if (val % 2 === 0) {
-          even.push(val * 2);
+          mul.push(val * 2);
         }
+		  else {
+			  mul.push(val);
+		  }
       });
-      console.log(even);
-      output.innerText = [...even];
+      console.log(mul);
+      output.innerText = [...mul];
       resolve(even);
     }, 2000);
   });
