@@ -26,7 +26,7 @@ const func = async () => {
       });
       console.log(mul);
       output.innerText = [...mul];
-      resolve(even);
+      resolve(mul);
     }, 2000);
   });
 };
