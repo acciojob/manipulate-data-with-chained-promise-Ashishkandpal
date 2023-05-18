@@ -18,11 +18,9 @@ const func = async () => {
     setTimeout(() => {
       arr.forEach((val) => {
         if (val % 2 === 0) {
+          mul.push(val);
           mul.push(val * 2);
         }
-		  else {
-			  mul.push(val);
-		  }
       });
       console.log(mul);
       output.innerText = [...mul];
